@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <a class="page-header__logo" href="#">
+            <img class="page-header__logo-img-1 logo-1" src="http://placehold.it/150x100" alt="cat-energy">
+            <img class="page-header__logo-img-2 logo-2" src="http://placehold.it/150x100" alt="cat-energy">
+        </a>
+        <nav class="main-nav">
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item"><a href="index.html">Главная</a></li>
+                    <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+                    <li class="site-list__item site-list__item--active"><a>Подбор программы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <h1 class="page-main__title">Подбор программы</h1>
+        <section class="main-form">
+            <p class="main-form__legend">Заполните анкету и мы подберем программу питания для вашего кота</p>
+            <form class="main-form__form form">
+                <label class="form__name-label">Имя:*
+                    <input class="form__name" type="text" placeholder="Барсик">
+                </label>
+                <label class="form__weight-label">Вес (кг):*
+                <input class="form__weight" type="text" placeholder="7">
+                </label>
+                <label class="form__age-label">Возраст (лет):
+                <input class="form__age" type="text" placeholder="7">
+                </label>
+                <div class="form__wrapper">
+                    <label>
+                        <input class="form__program form__program--loss" type="radio" value="loss" name="program">Похудение
+                    </label>
+                    <label>
+                        <input class="form__program form__program--up" type="radio" value="up" name="program">Набор массы
+                    </label>
+                    <label>
+                        <input class="form__program form__program--difficult" type="radio" value="difficult" name="program">Не знаю (нужен ваш совет)
+                    </label>
+                </div>
+                <fieldset class="form__group">
+                    <legend>Контактные данные (владельца кота)</legend>
+                    <label class="form__email-label">E-mail:*
+                        <input class="form__email" type="email" placeholder="Kuklachev@gmail.com">
+                    </label>
+                    <label class="form__phone-label">Телефон:*
+                        <input class="form__phone" type="tel" placeholder="8(960)900-60-90">
+                    </label>
+                </fieldset>
+                <fieldset class="form__group">
+                    <legend>Комментарий</legend>
+                    <label class="form__comment-label">Расскажите обо всех повадках кота
+                        <textarea class="form__comment" rows="4" cols="65"></textarea>
+                    </label>
+                </fieldset>
+                <fieldset class="form__group">
+                    <legend>Дополнительно</legend>
+                    <label class="form__extra-label form__extra-label--sugar">
+                        <input class="form__extra form__extra--sugar" type="checkbox" value="sugar" name="extra">Сахарозаменитель
+                    </label>
+                    <label class="form__extra-label form__extra-label--water">
+                        <input class="form__extra form__extra--water" type="checkbox" value="water" name="extra">Питьевая вода
+                    </label>
+                    <label class="form__extra-label form__extra-label--milk">
+                        <input class="form__extra form__extra--milk" type="checkbox" value="milk" name="extra">Молоко
+                    </label>
+                    <label class="form__extra-label form__extra-label--vitamins">
+                        <input class="form__extra form__extra--vitamins" type="checkbox" value="vitamins" name="extra">Витамины
+                    </label>
+                </fieldset>
+                <input type="submit" value="Отправить заявку">
+            </form>
+            
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+
+        <section class="page-footer__coordinates coordinates">
+            <div class="coordinates__wrapper">
+                <p class="coordinates__invitation">Приглашаем к сотрудничеству дилеров!</p>
+                <p class="coordinates__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            </div>
+            <div class="coordinates__map">
+                <img class="coordinates__map-img" src="http://placehold.it/300x200" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+            </div>
+        </section>
+
+        <div class="page-footer__logo-wrapper">
+            <img class="page-footer__logo logo-2" src="http://placehold.it/100x50" alt="cat-energy">
+        </div>
+        <div class="page-footer__social social">
+            <ul class="social__list">
+                <li class="social__item">
+                    <a class="social__link social__link--vkontakte" href="http://vk.com" target="_blank">Мы вконтакте</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" href="https://www.instagram.com/?hl=ru" target="_blank">Мы в инстаграм</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="http://facebook.com" target="_blank">Мы в фейсбук</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="http://htmlacademy.ru" target="_blank">HTML Academy</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
