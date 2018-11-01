@@ -30,15 +30,15 @@
         <h1 class="page-main__title">Подбор программы</h1>
         <section class="main-form">
             <p class="main-form__legend">Заполните анкету и мы подберем программу питания для вашего кота</p>
-            <form class="main-form__form form">
+            <form class="main-form__form form" method="post" action="https://echo.htmlacademy.ru">
                 <label class="form__name-label">Имя:*
-                    <input class="form__name" type="text" placeholder="Барсик">
+                    <input class="form__name" type="text" name="name"  placeholder="Барсик">
                 </label>
                 <label class="form__weight-label">Вес (кг):*
-                <input class="form__weight" type="text" placeholder="7">
+                    <input class="form__weight" type="text" name="weight" placeholder="7">
                 </label>
                 <label class="form__age-label">Возраст (лет):
-                <input class="form__age" type="text" placeholder="7">
+                    <input class="form__age" type="text" name="age" placeholder="7">
                 </label>
                 <div class="form__wrapper">
                     <label>
@@ -54,16 +54,16 @@
                 <fieldset class="form__group">
                     <legend>Контактные данные (владельца кота)</legend>
                     <label class="form__email-label">E-mail:*
-                        <input class="form__email" type="email" placeholder="Kuklachev@gmail.com">
+                        <input class="form__email" type="email" name="email" placeholder="Kuklachev@gmail.com">
                     </label>
                     <label class="form__phone-label">Телефон:*
-                        <input class="form__phone" type="tel" placeholder="8(960)900-60-90">
+                        <input class="form__phone" type="tel" name="tel" placeholder="8(960)900-60-90">
                     </label>
                 </fieldset>
                 <fieldset class="form__group">
                     <legend>Комментарий</legend>
                     <label class="form__comment-label">Расскажите обо всех повадках кота
-                        <textarea class="form__comment" rows="4" cols="65"></textarea>
+                        <textarea class="form__comment" rows="4" cols="65" name="comment"></textarea>
                     </label>
                 </fieldset>
                 <fieldset class="form__group">
@@ -83,7 +83,7 @@
                 </fieldset>
                 <input type="submit" value="Отправить заявку">
             </form>
-            
+
         </section>
 
     </main>
