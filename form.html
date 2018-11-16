@@ -5,22 +5,25 @@
     <meta charset="utf-8">
     <title>Test</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="page-header">
-        <a class="page-header__logo" href="#">
-            <img class="page-header__logo-img-1 logo-1" src="http://placehold.it/150x100" alt="cat-energy">
-            <img class="page-header__logo-img-2 logo-2" src="http://placehold.it/150x100" alt="cat-energy">
+        <a class="page-header__logo-1" href="#">
+            <img class="page-header__logo-img-1 logo-1" src="img/logo-mobile.png" alt="cat-energy">
         </a>
-        <nav class="main-nav">
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
-            <div class="main-nav__wrapper">
+        <a class="page-header__logo-2" href="#">
+            <img class="page-header__logo-img-2 logo-2" src="img/logo-mobile-header.png" alt="cat-energy">
+        </a>
+        <nav class="page-header__nav main-nav">
+            <button class="main-nav__toggle" type="button">О.M.</button>
+            <div class="main-nav__wrapper visually-hidde">
                 <ul class="main-nav__list site-list">
-                    <li class="site-list__item"><a href="index.html">Главная</a></li>
+                    <li class="site-list__item site-list__item--active"><a>Главная</a></li>
                     <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-                    <li class="site-list__item site-list__item--active"><a>Подбор программы</a></li>
+                    <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
                 </ul>
             </div>
         </nav>
@@ -92,27 +95,35 @@
 
         <section class="page-footer__coordinates coordinates">
             <div class="coordinates__wrapper">
-                <p class="coordinates__invitation">Приглашаем к сотрудничеству дилеров!</p>
+                <p class="coordinates__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
                 <p class="coordinates__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
             </div>
             <div class="coordinates__map">
-                <img class="coordinates__map-img" src="http://placehold.it/300x200" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6235455751223!2d30.323669670818084!3d59.9383886447178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1542363912812"
+                        width="100%" height="363" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <!--<img class="coordinates__map-img" src="http://placehold.it/300x200"-->
+                <!--alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">-->
             </div>
         </section>
 
-        <div class="page-footer__logo-wrapper">
-            <img class="page-footer__logo logo-2" src="http://placehold.it/100x50" alt="cat-energy">
-        </div>
+        <a href="#" class="page-footer__logo-wrapper">
+            <img class="page-footer__logo logo-2" src="img/footer-logo.png" alt="cat-energy">
+        </a>
         <div class="page-footer__social social">
             <ul class="social__list">
-                <li class="social__item">
-                    <a class="social__link social__link--vkontakte" href="http://vk.com" target="_blank">Мы вконтакте</a>
+                <li class="social__item social__item--vkontakte">
+                    <a class="social__link social__link--vkontakte" href="http://vk.com" target="_blank"><span
+                            class="visually-hidden">Мы вконтакте</span></a>
                 </li>
-                <li class="social__item">
-                    <a class="social__link social__link--instagram" href="https://www.instagram.com/?hl=ru" target="_blank">Мы в инстаграм</a>
+                <li class="social__item social__item--instagram">
+                    <a class="social__link social__link--instagram" href="https://www.instagram.com/?hl=ru" target="_blank"><span
+                            class="visually-hidden">Мы
+                        в инстаграм</span></a>
                 </li>
-                <li class="social__item">
-                    <a class="social__link social__link--facebook" href="http://facebook.com" target="_blank">Мы в фейсбук</a>
+                <li class="social__item social__item--facebook">
+                    <a class="social__link social__link--facebook" href="http://facebook.com" target="_blank"><span
+                            class="visually-hidden">Мы в
+                        фейсбук</span></a>
                 </li>
             </ul>
         </div>

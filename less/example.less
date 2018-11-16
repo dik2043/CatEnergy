@@ -23,6 +23,11 @@
   line-height: 18px;
 }
 
+.example__list-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .example__list {
   width: 100%;
 
@@ -39,15 +44,15 @@
   outline: 1px dashed black;
 }
 
+.example__list:first-child {
+  margin-right: 10%;
+}
+
 .example__value {
   width: 50%;
 
   padding-top: 10px;
   padding-bottom: 8px;
-}
-
-.example__value:last-child {
-  //padding-left: 10%;
 }
 
 .example__field {
@@ -64,14 +69,24 @@
   outline: 1px solid green;
 }
 
-.example__field:last-child {
-  //padding-left: 10%;
-}
-
 .example__cost {
+  //margin-bottom: 29px;
+
   text-align: center;
   text-transform: uppercase;
 
   font-size: 14px;
   line-height: 20px;
+}
+
+.example__slider {
+  position: relative;
+  width: 100%;
+  height: 285px;
+
+  margin-top: 42px;
+
+  background: url("../img/before-mobile.png") no-repeat 50% 0;
+
+  outline: 1px solid yellow;
 }
