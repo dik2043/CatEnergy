@@ -1,3 +1,198 @@
 body {
-  background: black;
+  max-width: 320px;
+  font-family: 'Oswald', sans-serif;
+  outline: 2px solid grey;
+}
+a {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.page-header {
+  display: flex;
+  height: 55px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 11px;
+  outline: 1px solid black;
+}
+.page-header__logo-1 {
+  margin-right: 17%;
+}
+.page-header__logo-2 {
+  margin-top: 13px;
+  margin-right: auto;
+}
+.main-wrapper {
+  width: 280px;
+  margin: auto;
+  padding: 0 20px 0 20px;
+  outline: 1px solid blue;
+}
+.main-nav__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-nav__toggle {
+  margin-top: 12px;
+  padding: 0;
+}
+.nutrition__header {
+  position: relative;
+  box-sizing: border-box;
+  height: 480px;
+  padding-top: 31px;
+  color: white;
+  background: url("../img/index-can-mobile.png") 50% 167px no-repeat, url("../img/index-background-mobile.jpg") 50% 0 no-repeat;
+  background-size: 280px auto, 320px 305px;
+  outline: 1px dashed green;
+}
+.nutrition__intro {
+  margin: 0 0 16px 0;
+  text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+}
+.nutrition__slogan {
+  margin: 0 0 300px 0;
+  padding: 5px 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+}
+.nutrition__to-program {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  display: block;
+  width: calc(100% - 40px);
+  margin: auto;
+  padding: 11px 0 11px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background-color: #68b738;
+}
+.nutrition__title-wrapper {
+  max-width: 280px;
+  margin: auto;
+  outline: 1px solid orange;
+}
+.nutrition__title {
+  margin: 56px 0 27px 0;
+  padding: 0 0 0 93px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+.nutrition__description {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 25px;
+  padding-bottom: 22px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+.nutrition__catalog {
+  display: inline-block;
+  width: 241px;
+  padding-top: 18px;
+  margin-left: 20px;
+  margin-bottom: 17px;
+  color: black;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  border-top: 1px solid #d9d9d9;
+}
+.explanation-wrapper {
+  max-width: 280px;
+  margin: auto;
+  margin-top: 25px;
+  outline: 1px dashed orange;
+}
+.explanation__title {
+  margin: 0 0 30px 0;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 60px;
+}
+.explanation-list {
+  margin: 0 0 53px 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+.explanation__description {
+  margin: 0 0 20px 0;
+  padding: 0 0 5px 80px;
+  outline: 1px dashed grey;
+}
+.example__wrapper {
+  max-width: 280px;
+  margin: auto;
+  outline: 1px dashed green;
+}
+.example__title {
+  margin: 0 0 26px 0;
+  padding-top: 7px;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 60px;
+}
+.example__description {
+  margin: 0 0 25px 0;
+  padding-right: 3px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+.example__list {
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  text-transform: uppercase;
+  outline: 1px dashed black;
+}
+.example__value {
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.example__field {
+  width: 50%;
+  margin: 0;
+  color: #555555;
+  text-transform: lowercase;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  outline: 1px solid green;
+}
+.example__cost {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
 }
