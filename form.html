@@ -32,30 +32,33 @@
     <main class="page-main">
         <h1 class="page-main__title">Подбор программы</h1>
         <section class="main-form">
-            <p class="main-form__legend">Заполните анкету и мы подберем программу питания для вашего кота</p>
+            <p class="main-form__legend">Заполните анкету и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
             <form class="main-form__form form" method="post" action="https://echo.htmlacademy.ru">
                 <label class="form__name-label">Имя:*
-                    <input class="form__name" type="text" name="name"  placeholder="Барсик">
+                    <input class="form__name" type="text" name="name"  placeholder="БАРСИК">
                 </label>
-                <label class="form__weight-label">Вес (кг):*
+                <label class="form__weight-label">Вес&nbsp;(кг):*
                     <input class="form__weight" type="text" name="weight" placeholder="7">
                 </label>
-                <label class="form__age-label">Возраст (лет):
+                <label class="form__age-label">Возраст&nbsp;(лет):
                     <input class="form__age" type="text" name="age" placeholder="7">
                 </label>
                 <div class="form__wrapper">
-                    <label>
+                    <label class="form__program-label">
                         <input class="form__program form__program--loss" type="radio" value="loss" name="program">Похудение
                     </label>
-                    <label>
+                    <label class="form__program-label">
                         <input class="form__program form__program--up" type="radio" value="up" name="program">Набор массы
                     </label>
-                    <label>
+                    <label class="form__program-label">
                         <input class="form__program form__program--difficult" type="radio" value="difficult" name="program">Не знаю (нужен ваш совет)
                     </label>
                 </div>
                 <fieldset class="form__group">
-                    <legend>Контактные данные (владельца кота)</legend>
+                    <div class="form__title title">
+                        <p class="title__text">Контактные данные <br> (владельца кота)</p>
+                        <div class="title__line"></div>
+                    </div>
                     <label class="form__email-label">E-mail:*
                         <input class="form__email" type="email" name="email" placeholder="Kuklachev@gmail.com">
                     </label>
@@ -64,27 +67,33 @@
                     </label>
                 </fieldset>
                 <fieldset class="form__group">
-                    <legend>Комментарий</legend>
-                    <label class="form__comment-label">Расскажите обо всех повадках кота
-                        <textarea class="form__comment" rows="4" cols="65" name="comment"></textarea>
-                    </label>
+                    <div class="form__title title">
+                        <p class="title__text">Комментарий</p>
+                        <div class="title__line"></div>
+                    </div>
+                    <textarea class="form__comment" name="comment" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
                 </fieldset>
                 <fieldset class="form__group">
-                    <legend>Дополнительно</legend>
-                    <label class="form__extra-label form__extra-label--sugar">
-                        <input class="form__extra form__extra--sugar" type="checkbox" value="sugar" name="extra">Сахарозаменитель
-                    </label>
-                    <label class="form__extra-label form__extra-label--water">
-                        <input class="form__extra form__extra--water" type="checkbox" value="water" name="extra">Питьевая вода
-                    </label>
-                    <label class="form__extra-label form__extra-label--milk">
-                        <input class="form__extra form__extra--milk" type="checkbox" value="milk" name="extra">Молоко
-                    </label>
-                    <label class="form__extra-label form__extra-label--vitamins">
-                        <input class="form__extra form__extra--vitamins" type="checkbox" value="vitamins" name="extra">Витамины
-                    </label>
+                    <div class="form__title title">
+                        <p class="title__text">Дополнительно</p>
+                        <div class="title__line"></div>
+                    </div>
+                    <div class="form__extra-wrapper">
+                        <label class="form__extra-label form__extra-label--sugar">
+                            <input class="form__extra form__extra--sugar" type="checkbox" value="sugar" name="extra">Сахарозаменитель
+                        </label>
+                        <label class="form__extra-label form__extra-label--water">
+                            <input class="form__extra form__extra--water" type="checkbox" value="water" name="extra">Питьевая вода
+                        </label>
+                        <label class="form__extra-label form__extra-label--milk">
+                            <input class="form__extra form__extra--milk" type="checkbox" value="milk" name="extra">Молоко
+                        </label>
+                        <label class="form__extra-label form__extra-label--vitamins">
+                            <input class="form__extra form__extra--vitamins" type="checkbox" value="vitamins" name="extra">Витамины
+                        </label>
+                    </div>
                 </fieldset>
-                <input type="submit" value="Отправить заявку">
+                <input class="form__submit" type="submit" value="Отправить заявку">
             </form>
 
         </section>
