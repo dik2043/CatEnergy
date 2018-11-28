@@ -23,3 +23,25 @@
 .site-list__item a {
   color: black;
 }
+
+
+@media (min-width: 768px) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .site-list__item {
+    margin: 0;
+    padding: 32px 0 5px 0;
+  }
+
+  .site-list__item--active {
+    padding-bottom: 3px;
+
+    border-bottom: 2px solid #68b738;
+  }
+}

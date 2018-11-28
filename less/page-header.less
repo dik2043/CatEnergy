@@ -1,5 +1,6 @@
 .page-header {
   display: flex;
+  justify-content: space-between;
   position: relative;
 
   height: 55px;
@@ -11,9 +12,12 @@
   outline: 1px solid black;
 }
 
-.page-header__logo-1 {
-  //margin-right: 47px;
-  margin-right: 17%;
+.page-header__logo {
+  display: block;
+  width: 200px;
+  height: 54px;
+
+  background: url("../img/logo-mobile-header2.png") no-repeat;
 }
 
 .page-header__logo-2 {
@@ -24,4 +28,21 @@
 .page-header__nav {
   //position: relative;
   //outline: 1px solid black;
+}
+
+
+@media (min-width: 758px) {
+  .page-header {
+    height: 90px;
+
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .page-header__logo {
+    width: 200px;
+    height: 90px;
+
+    background: url("../img/logo-tablet.png") no-repeat 0 12px;
+  }
 }

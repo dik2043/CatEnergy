@@ -1,7 +1,7 @@
-.explanation-wrapper {
+.explanation__wrapper {
   max-width: 280px;
-  margin: auto;
-  margin-top: 25px;
+
+  margin: 25px auto auto auto;
 
   outline: 1px dashed orange;
 }
@@ -16,7 +16,9 @@
   line-height: 60px;
 }
 
-.explanation-list {
+.explanation__list {
+  position: relative;
+
   margin: 0 0 53px 0;
   padding: 0;
 
@@ -32,4 +34,63 @@
   padding: 0 0 5px 80px;
 
   outline: 1px dashed grey;
+}
+
+.explanation__description::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: #68b738;
+}
+
+
+@media (min-width: 768px) {
+  .explanation__wrapper {
+    min-width: 708px;
+    margin: 0;
+  }
+
+  .explanation__title {
+    margin: 17px 0 0 0;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .explanation__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .explanation__description {
+    position: relative;
+    width: 250px;
+
+    margin: 73px 0 60px 0;
+    padding: 112px 74px 0 0;
+
+    outline: 1px dashed grey;
+  }
+
+  .explanation__description::before {
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 80px;
+    height: 80px;
+
+  }
 }

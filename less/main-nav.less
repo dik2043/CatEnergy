@@ -13,3 +13,27 @@
   padding: 0;
   //background-image: url("img/mobile-menu.png;");
 }
+
+
+@media (min-width: 768px) {
+  .main-nav__toggle {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+  .main-nav__wrapper {
+    position: static;
+    width: 440px;
+
+    //padding-left: 50px;
+
+    outline: 1px solid blue;
+  }
+}
