@@ -1,11 +1,11 @@
 body {
-  max-width: 768px;
+  max-width: 1440px;
 
   margin: 0;
 
   font-family: 'Oswald', sans-serif;
 
-  //outline: 2px solid orange;
+  outline: 2px solid orange;
 }
 
 a {
@@ -24,3 +24,12 @@ a {
   overflow: hidden;
 }
 
+
+@media (min-width: 1440px) {
+  body {
+    background:
+            url("../img/index-can.png") 560px 142px  no-repeat,
+            url("../img/index-background-desktop.jpg.png") 720px 0 no-repeat;
+    background-size: auto auto, 720px auto;
+  }
+}
