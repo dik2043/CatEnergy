@@ -93,6 +93,7 @@
   outline: 1px solid yellow;
 }
 
+//768                   768                   768                   768                   768                   
 
 @media (min-width: 768px) {
   .example__wrapper {
@@ -176,6 +177,78 @@
     background:
             url("../img/before-desktop.png") no-repeat 0 0,
             url("../img/after-desktop.png") no-repeat 100% 0;
+
+    outline: 1px solid yellow;
+  }
+}
+
+//1440                    1440                    1440                    1440                    
+
+@media (min-width: 1440px) {
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+    max-width: 1300px;
+
+    margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }  
+
+  .example__title {
+    margin: 58px 0 0 0;
+    padding-top: 0;
+  }
+
+  .example__description {
+    width: 450px;
+    margin: 143px 0 0 0;
+  }
+
+  .example__wrapper-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 370px;
+  }
+
+  .example__list-wrapper {
+    display: flex;
+
+    width: 100%;
+    
+    margin-top: 74px;
+  }
+
+  .example__cost {
+    width: 330px;
+
+    margin-top: 45px;
+
+    text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .example__cost-numbers {
+    padding-left: 60px;
+  }
+
+  .example__slider {
+    width: 690px;
+    height: 652px;
+    
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    margin-top: 0px;
+
+    background:
+            url("../img/before-desktop2.png") no-repeat 40px 0,
+            url("../img/after-desktop.png") no-repeat 385px 0;
+    //background-size: contain;
 
     outline: 1px solid yellow;
   }

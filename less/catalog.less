@@ -3,6 +3,8 @@
   padding: 0;
 
   list-style: none;
+
+  outline: 1px solid green;
 }
 
 .catalog__item {
@@ -101,4 +103,22 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+}
+
+
+@media (min-width: 768px) {
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    padding: 0 37px 0 37px;
+  }
+  
+  .catalog__item {
+    width: 249px;
+    height: 500px;
+    
+    outline: 1px dashed orange;
+  }
 }
