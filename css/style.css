@@ -1334,6 +1334,14 @@ a {
 .main-form__form {
   margin-top: 52px;
 }
+@media (min-width: 768px) {
+  .main-form__legend {
+    width: 342px;
+    margin: 54px 0 55px 41px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -1433,6 +1441,106 @@ a {
   background-color: #68b738;
   border: none;
 }
+@media (min-width: 768px) {
+  .form__cover {
+    width: 342px;
+    margin-left: 41px;
+    margin-bottom: 58px;
+    outline: 1px solid orange;
+  }
+  .form__info-wrapper {
+    width: 312px;
+    font-size: 20px;
+    line-height: 20px;
+    outline: 1px solid green;
+  }
+  .form__name-label,
+  .form__weight-label,
+  .form__age-label {
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .form__name,
+  .form__weight,
+  .form__age {
+    height: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .form__wrapper {
+    width: 100%;
+    margin-top: 81px;
+    padding-left: 75px;
+    font-size: 20px;
+    line-height: 20px;
+    outline: 1px solid blue;
+  }
+  .form__program-label,
+  .form__program {
+    padding: 0;
+    margin: 0;
+  }
+  .form__program-label {
+    padding-top: 16px;
+    padding-bottom: 17px;
+  }
+  .form__title {
+    margin-top: 0;
+  }
+  .form__email-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 43px;
+    margin-bottom: 47px;
+    margin-left: 39px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .form__email-label,
+  .form__phone-label,
+  .form__email,
+  .form__phone {
+    margin: 0;
+    padding: 0;
+  }
+  .form__email,
+  .form__phone {
+    margin-left: 3%;
+    padding-left: 3%;
+  }
+  .form__email {
+    margin-bottom: 53px;
+  }
+  .form__comment {
+    height: 229px;
+    margin-left: 43px;
+  }
+  .form__extra-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 626px;
+    margin-top: 8px;
+    margin-left: 43px;
+  }
+  .form__extra-label {
+    box-sizing: border-box;
+    width: 282px;
+    margin: 0 0 30px 0;
+    padding: 10px 0 10px 33px;
+    font-size: 20px;
+    line-height: 20px;
+    outline: 1px solid grey;
+  }
+  .form__submit {
+    width: 282px;
+    margin: 22px 0 0 38px;
+    padding: 16px 0 16px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 .title {
   display: flex;
   font-size: 24px;
@@ -1443,6 +1551,9 @@ a {
   flex-shrink: 0;
   width: auto;
   margin-right: 6%;
+}
+.title__text-special {
+  max-width: 185px;
 }
 .title__line {
   flex-grow: 1;
@@ -1462,6 +1573,9 @@ a {
     margin-bottom: 48px;
     margin-right: 6%;
     padding-left: 37px;
+  }
+  .title__text-special {
+    max-width: unset;
   }
 }
 @media (min-width: 1440px) {

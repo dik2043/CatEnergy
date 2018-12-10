@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta id="meta" name="viewport" content="width=device-width">
     <title>Test</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
@@ -30,37 +31,43 @@
         <section class="main-form">
             <p class="main-form__legend">Заполните анкету и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
             <form class="main-form__form form" method="post" action="https://echo.htmlacademy.ru">
-                <label class="form__name-label">Имя:*
-                    <input class="form__name" type="text" name="name"  placeholder="БАРСИК">
-                </label>
-                <label class="form__weight-label">Вес&nbsp;(кг):*
-                    <input class="form__weight" type="text" name="weight" placeholder="7">
-                </label>
-                <label class="form__age-label">Возраст&nbsp;(лет):
-                    <input class="form__age" type="text" name="age" placeholder="7">
-                </label>
-                <div class="form__wrapper">
-                    <label class="form__program-label">
-                        <input class="form__program form__program--loss" type="radio" value="loss" name="program">Похудение
-                    </label>
-                    <label class="form__program-label">
-                        <input class="form__program form__program--up" type="radio" value="up" name="program">Набор массы
-                    </label>
-                    <label class="form__program-label">
-                        <input class="form__program form__program--difficult" type="radio" value="difficult" name="program">Не знаю (нужен ваш совет)
-                    </label>
+                <div class="form__cover">
+                    <div class="form__info-wrapper">
+                        <label class="form__name-label">Имя:*
+                            <input class="form__name" type="text" name="name"  placeholder="БАРСИК">
+                        </label>
+                        <label class="form__weight-label">Вес&nbsp;(кг):*
+                            <input class="form__weight" type="text" name="weight" placeholder="7">
+                        </label>
+                        <label class="form__age-label">Возраст&nbsp;(лет):
+                            <input class="form__age" type="text" name="age" placeholder="7">
+                        </label>
+                    </div>
+                    <div class="form__wrapper">
+                        <label class="form__program-label">
+                            <input class="form__program form__program--loss" type="radio" value="loss" name="program">Похудение
+                        </label>
+                        <label class="form__program-label">
+                            <input class="form__program form__program--up" type="radio" value="up" name="program">Набор массы
+                        </label>
+                        <label class="form__program-label">
+                            <input class="form__program form__program--difficult" type="radio" value="difficult" name="program">Не знаю (нужен ваш совет)
+                        </label>
+                    </div>
                 </div>
                 <fieldset class="form__group">
                     <div class="form__title title">
-                        <p class="title__text">Контактные данные <br> (владельца кота)</p>
+                        <p class="title__text title__text-special">Контактные данные (владельца кота)</p>
                         <div class="title__line"></div>
                     </div>
-                    <label class="form__email-label">E-mail:*
-                        <input class="form__email" type="email" name="email" placeholder="Kuklachev@gmail.com">
-                    </label>
-                    <label class="form__phone-label">Телефон:*
-                        <input class="form__phone" type="tel" name="tel" placeholder="8(960)900-60-90">
-                    </label>
+                    <div class="form__email-wrapper">
+                        <label class="form__email-label">E-mail:*
+                            <input class="form__email" type="email" name="email" placeholder="Kuklachev@gmail.com">
+                        </label>
+                        <label class="form__phone-label">Телефон:*
+                            <input class="form__phone" type="tel" name="tel" placeholder="8(960)900-60-90">
+                        </label>
+                    </div>
                 </fieldset>
                 <fieldset class="form__group">
                     <div class="form__title title">
