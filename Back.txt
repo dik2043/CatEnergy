@@ -1,0 +1,3 @@
+<p class="catalog__more">Показать еще 100500 товаров</p>
+            <p class="catalog__more-slogan">На самом деле вкусов гораздо больше!</p>
+            <a class="catalog__show-all" href="#">Показать все</a>

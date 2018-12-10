@@ -16,7 +16,12 @@
 }
 
 .catalog__img {
+  width: 50%;
+  height: 144px;
+  
   margin-top: 5px;
+  
+  outline: 1px dashed black;
 }
 
 .catalog__item-right {
@@ -105,6 +110,7 @@
   text-transform: uppercase;
 }
 
+//768                   768                   768                   768                   
 
 @media (min-width: 768px) {
   .catalog__list {
@@ -117,8 +123,237 @@
   
   .catalog__item {
     width: 249px;
-    height: 500px;
+    height: 480px;
+    
+    margin-top: 75px;
+    margin-bottom: 16px;
     
     outline: 1px dashed orange;
+  }
+
+  .catalog__item-wrapper {
+    flex-direction: column;
+  }
+  
+  .catalog__img {
+    width: 195px;
+    height: 208px;    
+    
+    margin: auto;
+    margin-top: 0;
+  }
+  
+  .catalog__item-right {
+    width: 100%;
+    
+    margin-top: 45px;
+  }
+  
+  .catalog__title {
+    width: 145px;
+    
+    margin: auto;
+    padding: 0;
+    
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
+  .catalog__feature {
+    margin-top: 18px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .catalog__feature tr {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .catalog__field {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+
+  .catalog__value {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: right;
+  }
+
+  .catalog__to-order {
+    margin: 30px auto 0 auto;
+    //padding: 10px 0 10px 0;
+
+    //text-align: center;
+    //text-transform: uppercase;
+    //font-size: 16px;
+    //line-height: 20px;
+    //color: white;
+
+    //background-color: #68b738;
+  }
+
+  .catalog__more {
+    width: 150px;
+    
+    margin: auto;
+    margin-top: 254px;
+    margin-bottom: 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .catalog__more-slogan {
+    width: 180px;
+    
+    margin: auto;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog__show-all {
+    display: block;
+
+    padding: 10px 0 10px 0;
+    margin: 82px auto auto auto;    
+
+    color: #444444;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+//1440                    1440                    1440                    1440                    
+
+@media (min-width: 1440px) {
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    margin: auto;
+    padding: 0 40px 0 40px;
+  }
+
+  .catalog__item {
+    box-sizing: border-box;
+    width: 245px;
+    height: 472px;
+
+    margin-top: 0;
+    margin-bottom: 101px;
+
+    outline: 1px dashed orange;
+  }
+
+  .catalog__item-wrapper {
+    flex-direction: column;
+  }
+
+  .catalog__img {
+    width: 195px;
+    height: 208px;
+
+    margin: 0 auto auto auto;
+  }
+
+  .catalog__item-right {
+    box-sizing: border-box;
+    width: 100%;
+
+    margin-top: 37px;
+    padding: 0 38px 0 38px;
+  }
+
+  .catalog__title {
+    width: 145px;
+
+    margin: auto;
+    padding: 0;
+
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .catalog__feature {
+    margin-top: 18px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .catalog__feature tr {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .catalog__field {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+
+  .catalog__value {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: right;
+  }
+
+  .catalog__to-order {
+    width: 169px;
+    margin: 30px auto 0 auto;
+    //padding: 10px 0 10px 0;
+
+    //text-align: center;
+    //text-transform: uppercase;
+    //font-size: 16px;
+    //line-height: 20px;
+    //color: white;
+
+    //background-color: #68b738;
+  }
+
+  .catalog__more {
+    width: 150px;
+
+    margin: 245px auto 26px auto;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .catalog__more-slogan {
+    width: 180px;
+
+    margin: auto;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .catalog__show-all {
+    display: block;
+
+    padding: 10px 0 10px 0;
+    margin: 82px auto auto auto;
+
+    color: #444444;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
