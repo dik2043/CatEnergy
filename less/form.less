@@ -167,7 +167,7 @@
   }
   
   .form__wrapper {
-    width: 100%;
+    width: auto;
     
     margin-top: 81px;
     padding-left: 75px;
@@ -260,5 +260,52 @@
     
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+//1440                    1440                    1440                    1440                    
+
+@media (min-width: 1440px) {
+  .form__cover {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 1050px;
+    
+    margin-bottom: 42px;
+  }
+
+  .form__wrapper {
+    width: 400px;
+    
+    margin: 35px 0 auto auto;
+  }
+
+  .form__program-label,
+  .form__program {
+    padding: 0;
+    margin: 0;
+  }
+
+  .form__program-label {
+    margin-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 73px;
+  }
+  
+  .form__email-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1217px;
+    
+    margin-top: 91px;
+    margin-bottom: 84px;
+    margin-left: 41px;
+  }
+  
+  .form__email-label,
+  .form__phone-label {
+    width: 570px;
   }
 }
