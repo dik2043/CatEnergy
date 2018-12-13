@@ -1579,12 +1579,38 @@ a {
     justify-content: space-between;
     width: 1217px;
     margin-top: 91px;
-    margin-bottom: 84px;
+    margin-bottom: 15px;
     margin-left: 41px;
   }
   .form__email-label,
   .form__phone-label {
     width: 570px;
+  }
+  .form__comment {
+    height: 229px;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 43px;
+  }
+  .form__extra-wrapper {
+    width: 1220px;
+    margin-top: 57px;
+    margin-left: 45px;
+  }
+  .form__extra-label {
+    box-sizing: border-box;
+    width: 245px;
+    margin: 0 0 0 0;
+    padding: 10px 0 10px 33px;
+    font-size: 20px;
+    line-height: 20px;
+    outline: 1px solid grey;
+  }
+  .form__submit {
+    width: 570px;
+    margin: 59px 0 82px 40px;
+    padding: 16px 0 16px 0;
   }
 }
 .title {
