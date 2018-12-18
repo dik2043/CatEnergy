@@ -30,6 +30,7 @@
 }
 
 .explanation__description {
+  position: relative;
   margin: 0 0 20px 0;
   padding: 0 0 5px 80px;
 
@@ -48,6 +49,57 @@
   background-color: #68b738;
 }
 
+.explanation__description--healthy::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 17px;
+  display: block;
+  
+  width: 26px;
+  height: 29px;
+
+  background: url("/img/Sprite.png") -216px -318px;
+}
+
+.explanation__description--powder::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  display: block;
+
+  width: 30px;
+  height: 32px;
+
+  background: url("/img/Sprite.png") -239px -284px;
+}
+
+.explanation__description--intake::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  display: block;
+
+  width: 24px;
+  height: 31px;
+
+  background: url("/img/Sprite.png") -245px -318px;
+}
+
+.explanation__description--interval::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  display: block;
+
+  width: 27px;
+  height: 32px;
+
+  background: url("/img/Sprite.png") -146px -349px;
+}
 
 //768                   768                   768                   768                   768                   
 
@@ -84,6 +136,58 @@
     padding: 112px 74px 0 0;
 
     outline: 1px dashed grey;
+  }
+
+  .explanation__description--healthy::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 27px;
+    display: block;
+
+    width: 26px;
+    height: 29px;
+
+    background: url("/img/Sprite.png") -216px -318px;
+  }
+
+  .explanation__description--powder::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    display: block;
+
+    width: 30px;
+    height: 32px;
+
+    background: url("/img/Sprite.png") -239px -284px;
+  }
+
+  .explanation__description--intake::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    display: block;
+
+    width: 24px;
+    height: 31px;
+
+    background: url("/img/Sprite.png") -245px -318px;
+  }
+
+  .explanation__description--interval::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    display: block;
+
+    width: 27px;
+    height: 32px;
+
+    background: url("/img/Sprite.png") -146px -349px;
   }
 
   .explanation__description::before {

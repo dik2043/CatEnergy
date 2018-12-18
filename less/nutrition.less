@@ -63,6 +63,7 @@
 }
 
 .nutrition__title {
+  position: relative;
   margin: 56px 0 27px 0;
   padding: 0 0 0 93px;
 
@@ -71,6 +72,51 @@
   line-height: 37px;
   text-transform: uppercase;
 }
+
+.nutrition__title::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 22px;
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  background: url("/img/Sprite.png") -206px -178px;
+}
+
+.nutrition__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+
+  width: 50px;
+  height: 68px;
+}
+
+.nutrition__title--lose-weight::after {
+  top: -6px;
+  left: 30px;
+  
+  width: 36px;
+  height: 50px;
+  
+  background: url("/img/Sprite.png") -206px -232px;
+}
+
+.nutrition-title--get-weight::after {
+  top: 5px;
+  left: 12px;
+
+  width: 68px;
+  height: 29px;
+
+  background: url("/img/Sprite.png") -146px -318px;
+}
+
 
 .nutrition__description {
   margin: 0;
@@ -84,6 +130,7 @@
 }
 
 .nutrition__catalog {
+  position: relative;
   display: inline-block;
   width: 241px;
 
@@ -97,6 +144,19 @@
   line-height: 16px;
   text-transform: uppercase;
   border-top: 1px solid #d9d9d9;
+}
+
+.nutrition__catalog::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 95px;
+  display: block;
+
+  width: 25px;
+  height: 12px;
+
+  background: url("/img/Sprite.png") -244px -253px;
 }
 
 //768                   768                   768                   768                   768                   768                   
@@ -174,6 +234,51 @@
     line-height: 37px;
   }
 
+  .nutrition__title::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: auto;
+    right: 60px;
+    display: block;
+
+    width: 200px;
+    height: 200px;
+
+    background: url("/img/Sprite.png") -3px -115px;
+  }
+
+  .nutrition__title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+  }
+
+  .nutrition__title--lose-weight::after {
+    top: 3px;
+    left: auto;
+    right: 91px;
+    
+    width: 140px;
+    height: 194px;
+
+    background: url("/img/Sprite.png") -3px -318px;
+  }
+
+  .nutrition-title--get-weight::after {
+    top: 59px;
+    left: auto;
+    right: 28px;
+
+    width: 268px;
+    height: 112px;
+
+    background: url("/img/Sprite.png") -3px -0px;
+  }
+
   .nutrition__description {
     width: 343px;
 
@@ -201,6 +306,13 @@
     text-transform: uppercase;
     border-top: none;
   }
+
+  .nutrition__catalog::after {
+    top: 61px;
+    left: 183px;
+
+    background: url("/img/Sprite.png") -244px -253px;
+  }  
 }
 
 //1440                    1440                    1440                    1440                    1440                    1440                    
@@ -290,6 +402,51 @@
     line-height: 37px;
   }
 
+  .nutrition__title::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 52px;
+    right: auto;
+    display: block;
+
+    width: 100px;
+    height: 100px;
+
+    background: url("/img/Sprite4.png") -20px -76px;
+  }
+
+  .nutrition__title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: auto;
+    display: block;
+
+  }
+
+  .nutrition__title--lose-weight::after {
+    top: 0px;
+    left: 65px;
+    right: auto;
+
+    width: 70px;
+    height: 97px;
+
+    background: url("/img/Sprite4.png") -20px -196px;
+  }
+
+  .nutrition-title--get-weight::after {
+    top: 27px;
+    left: 32px;
+    right: auto;
+
+    width: 134px;
+    height: 56px;
+
+    background: url("/img/Sprite4.png") -20px -0px;
+  }
+
   .nutrition__description {
     width: 475px;
 
@@ -316,5 +473,10 @@
     line-height: 20px;
     text-transform: uppercase;
     border-top: none;
+  }
+
+  .nutrition__catalog::after {
+    top: 5px;
+    left: 183px;
   }
 }

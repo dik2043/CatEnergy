@@ -24,6 +24,9 @@ a {
     background-size: auto auto, 720px auto;
   }
 }
+svg {
+  color: red;
+}
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -38,11 +41,6 @@ a {
   display: block;
   width: 200px;
   height: 54px;
-  background: url("../img/logo-mobile-header2.png") no-repeat;
-}
-.page-header__logo-2 {
-  margin-top: 13px;
-  margin-right: auto;
 }
 @media (min-width: 758px) {
   .page-header {
@@ -53,7 +51,7 @@ a {
   .page-header__logo {
     width: 200px;
     height: 90px;
-    background: url("../img/logo-tablet.png") no-repeat 0 12px;
+    padding-top: 13px;
   }
 }
 @media (min-width: 1440px) {
@@ -65,7 +63,6 @@ a {
   .page-header__logo {
     width: 205px;
     margin-left: 40px;
-    background: url("../img/logo-desktop.png") no-repeat 0 12px;
   }
 }
 .main-wrapper {
@@ -159,12 +156,46 @@ a {
   outline: 1px solid orange;
 }
 .nutrition__title {
+  position: relative;
   margin: 56px 0 27px 0;
   padding: 0 0 0 93px;
   font-size: 24px;
   font-weight: normal;
   line-height: 37px;
   text-transform: uppercase;
+}
+.nutrition__title::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 22px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("/img/Sprite.png") -206px -178px;
+}
+.nutrition__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 68px;
+}
+.nutrition__title--lose-weight::after {
+  top: -6px;
+  left: 30px;
+  width: 36px;
+  height: 50px;
+  background: url("/img/Sprite.png") -206px -232px;
+}
+.nutrition-title--get-weight::after {
+  top: 5px;
+  left: 12px;
+  width: 68px;
+  height: 29px;
+  background: url("/img/Sprite.png") -146px -318px;
 }
 .nutrition__description {
   margin: 0;
@@ -176,6 +207,7 @@ a {
   line-height: 18px;
 }
 .nutrition__catalog {
+  position: relative;
   display: inline-block;
   width: 241px;
   padding-top: 18px;
@@ -186,6 +218,16 @@ a {
   line-height: 16px;
   text-transform: uppercase;
   border-top: 1px solid #d9d9d9;
+}
+.nutrition__catalog::after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 95px;
+  display: block;
+  width: 25px;
+  height: 12px;
+  background: url("/img/Sprite.png") -244px -253px;
 }
 @media (min-width: 768px) {
   .nutrition__header {
@@ -239,6 +281,40 @@ a {
     font-weight: normal;
     line-height: 37px;
   }
+  .nutrition__title::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: auto;
+    right: 60px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: url("/img/Sprite.png") -3px -115px;
+  }
+  .nutrition__title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  .nutrition__title--lose-weight::after {
+    top: 3px;
+    left: auto;
+    right: 91px;
+    width: 140px;
+    height: 194px;
+    background: url("/img/Sprite.png") -3px -318px;
+  }
+  .nutrition-title--get-weight::after {
+    top: 59px;
+    left: auto;
+    right: 28px;
+    width: 268px;
+    height: 112px;
+    background: url("/img/Sprite.png") -3px 0px;
+  }
   .nutrition__description {
     width: 343px;
     margin: 0;
@@ -255,6 +331,11 @@ a {
     line-height: 20px;
     text-transform: uppercase;
     border-top: none;
+  }
+  .nutrition__catalog::after {
+    top: 61px;
+    left: 183px;
+    background: url("/img/Sprite.png") -244px -253px;
   }
 }
 @media (min-width: 1440px) {
@@ -317,6 +398,40 @@ a {
     font-weight: normal;
     line-height: 37px;
   }
+  .nutrition__title::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 52px;
+    right: auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url("/img/Sprite4.png") -20px -76px;
+  }
+  .nutrition__title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: auto;
+    display: block;
+  }
+  .nutrition__title--lose-weight::after {
+    top: 0px;
+    left: 65px;
+    right: auto;
+    width: 70px;
+    height: 97px;
+    background: url("/img/Sprite4.png") -20px -196px;
+  }
+  .nutrition-title--get-weight::after {
+    top: 27px;
+    left: 32px;
+    right: auto;
+    width: 134px;
+    height: 56px;
+    background: url("/img/Sprite4.png") -20px 0px;
+  }
   .nutrition__description {
     width: 475px;
     margin: 43px 0 0 0;
@@ -336,6 +451,10 @@ a {
     line-height: 20px;
     text-transform: uppercase;
     border-top: none;
+  }
+  .nutrition__catalog::after {
+    top: 5px;
+    left: 183px;
   }
 }
 .explanation__wrapper {
@@ -359,6 +478,7 @@ a {
   line-height: 18px;
 }
 .explanation__description {
+  position: relative;
   margin: 0 0 20px 0;
   padding: 0 0 5px 80px;
   outline: 1px dashed grey;
@@ -371,6 +491,46 @@ a {
   width: 60px;
   height: 60px;
   background-color: #68b738;
+}
+.explanation__description--healthy::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 17px;
+  display: block;
+  width: 26px;
+  height: 29px;
+  background: url("/img/Sprite.png") -216px -318px;
+}
+.explanation__description--powder::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  display: block;
+  width: 30px;
+  height: 32px;
+  background: url("/img/Sprite.png") -239px -284px;
+}
+.explanation__description--intake::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  display: block;
+  width: 24px;
+  height: 31px;
+  background: url("/img/Sprite.png") -245px -318px;
+}
+.explanation__description--interval::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  display: block;
+  width: 27px;
+  height: 32px;
+  background: url("/img/Sprite.png") -146px -349px;
 }
 @media (min-width: 768px) {
   .explanation__wrapper {
@@ -397,6 +557,46 @@ a {
     margin: 73px 0 60px 0;
     padding: 112px 74px 0 0;
     outline: 1px dashed grey;
+  }
+  .explanation__description--healthy::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 27px;
+    display: block;
+    width: 26px;
+    height: 29px;
+    background: url("/img/Sprite.png") -216px -318px;
+  }
+  .explanation__description--powder::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 25px;
+    display: block;
+    width: 30px;
+    height: 32px;
+    background: url("/img/Sprite.png") -239px -284px;
+  }
+  .explanation__description--intake::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    display: block;
+    width: 24px;
+    height: 31px;
+    background: url("/img/Sprite.png") -245px -318px;
+  }
+  .explanation__description--interval::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 27px;
+    display: block;
+    width: 27px;
+    height: 32px;
+    background: url("/img/Sprite.png") -146px -349px;
   }
   .explanation__description::before {
     content: "";
@@ -760,9 +960,18 @@ a {
   border-bottom: 1px solid #d9d9d9;
 }
 .social__item {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 28px;
   background-color: aqua;
+}
+.social__item--vkontakte {
+  background: url("/img/Sprite2.png") -20px -65px;
+}
+.social__item--instagram {
+  background: url("/img/Sprite2.png") -20px -352px;
+}
+.social__item--facebook {
+  background: url("/img/Sprite2.png") -20px -495px;
 }
 .social__link {
   display: block;
@@ -784,11 +993,22 @@ a {
   padding: 65px 50px 19px 0;
 }
 .copyright__link {
+  position: relative;
   display: block;
   color: #808080;
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
+}
+.copyright__link::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -50px;
+  display: block;
+  width: 27px;
+  height: 34px;
+  background: url("/img/htmlacademy.png");
 }
 .page-footer__coordinates {
   margin-top: 65px;
@@ -1383,6 +1603,9 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 14px;
+}
+.form__program {
+  display: none;
 }
 .form__program-label {
   margin: 0 0 13px 9%;
