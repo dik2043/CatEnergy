@@ -7,6 +7,10 @@ body {
 a {
   text-decoration: none;
 }
+picture {
+  margin: 0;
+  padding: 0;
+}
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -19,13 +23,13 @@ a {
   overflow: hidden;
 }
 @media (min-width: 1440px) {
+  body {
+    margin: auto;
+  }
   .back {
     background: url("../img/index-can.png") 560px 142px no-repeat, url("../img/index-background-desktop.jpg.png") 720px 0 no-repeat;
     background-size: auto auto, 720px auto;
   }
-}
-svg {
-  color: red;
 }
 .page-header {
   display: flex;
@@ -35,12 +39,17 @@ svg {
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 11px;
-  outline: 1px dashed orange;
 }
 .page-header__logo {
   display: block;
   width: 200px;
   height: 54px;
+}
+.page-header__logo img:hover {
+  opacity: 0.8;
+}
+.page-header__logo img:active {
+  opacity: 0.6;
 }
 @media (min-width: 758px) {
   .page-header {
@@ -80,8 +89,49 @@ svg {
   width: 100%;
 }
 .main-nav__toggle {
+  position: relative;
+  width: 24px;
+  height: 18px;
   margin-top: 12px;
   padding: 0;
+  background-color: inherit;
+  border: none;
+}
+.main-nav__toggle:focus {
+  outline: none;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+  background-color: #222222;
+}
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+}
+.main-nav--opened .main-nav__toggle::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.main-nav--opened .main-nav__toggle::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .main-nav__toggle {
@@ -98,7 +148,6 @@ svg {
   .main-nav__wrapper {
     position: static;
     width: 440px;
-    outline: 1px solid blue;
   }
 }
 @media (min-width: 1440px) {
@@ -108,7 +157,6 @@ svg {
     width: 535px;
     padding-left: 15px;
     padding-right: 40px;
-    outline: 1px solid blue;
   }
 }
 .nutrition__header {
@@ -119,7 +167,6 @@ svg {
   color: white;
   background: url("../img/index-can-mobile.png") 50% 167px no-repeat, url("../img/index-background-mobile.jpg") 50% 0 no-repeat;
   background-size: 280px auto, 320px 305px;
-  outline: 1px dashed green;
 }
 .nutrition__intro {
   margin: 0 0 16px 0;
@@ -150,10 +197,16 @@ svg {
   color: white;
   background-color: #68b738;
 }
+.nutrition__to-program:hover {
+  background-color: #5eaa2f;
+}
+.nutrition__to-program:active {
+  color: #8fc46e;
+  background-color: #5eaa2f;
+}
 .nutrition__title-wrapper {
   max-width: 280px;
   margin: auto;
-  outline: 1px solid orange;
 }
 .nutrition__title {
   position: relative;
@@ -229,13 +282,15 @@ svg {
   height: 12px;
   background: url("/img/Sprite.png") -244px -253px;
 }
+.nutrition__catalog:active {
+  opacity: 0.3;
+}
 @media (min-width: 768px) {
   .nutrition__header {
     height: 807px;
     padding: 0;
     color: black;
     background: url("../img/index-can-tablet.png") 50% 201px no-repeat;
-    outline: 1px dashed green;
   }
   .nutrition__intro {
     width: 450px;
@@ -244,7 +299,6 @@ svg {
     text-align: left;
     font-size: 60px;
     line-height: 60px;
-    outline: 1px solid black;
   }
   .nutrition__slogan {
     margin-left: 88px;
@@ -272,7 +326,6 @@ svg {
   .nutrition__title-wrapper {
     max-width: 708px;
     margin: auto;
-    outline: 1px solid orange;
   }
   .nutrition__title {
     margin: 79px 0 25px 0;
@@ -321,7 +374,6 @@ svg {
     padding: 0 0 0 53px;
     font-size: 16px;
     line-height: 24px;
-    outline: 1px solid orange;
   }
   .nutrition__catalog {
     width: 241px;
@@ -344,7 +396,6 @@ svg {
     padding: 0;
     color: black;
     background: none;
-    outline: 1px dashed green;
   }
   .nutrition__intro {
     width: 450px;
@@ -353,7 +404,6 @@ svg {
     text-align: left;
     font-size: 60px;
     line-height: 60px;
-    outline: 1px solid black;
   }
   .nutrition__slogan {
     margin-left: 121px;
@@ -384,7 +434,6 @@ svg {
     max-width: 1300px;
     margin: 80px auto auto auto;
     padding: 0 40px 0 40px;
-    outline: 1px solid orange;
   }
   .nutrition__title-elem {
     min-width: 570px;
@@ -438,7 +487,6 @@ svg {
     padding: 0 0 0 53px;
     font-size: 16px;
     line-height: 24px;
-    outline: 1px solid orange;
   }
   .nutrition__description:nth-child(2) {
     width: 475px;
@@ -460,7 +508,6 @@ svg {
 .explanation__wrapper {
   max-width: 280px;
   margin: 25px auto auto auto;
-  outline: 1px dashed orange;
 }
 .explanation__title {
   margin: 0 0 30px 0;
@@ -481,7 +528,6 @@ svg {
   position: relative;
   margin: 0 0 20px 0;
   padding: 0 0 5px 80px;
-  outline: 1px dashed grey;
 }
 .explanation__description::before {
   content: "";
@@ -556,7 +602,6 @@ svg {
     width: 250px;
     margin: 73px 0 60px 0;
     padding: 112px 74px 0 0;
-    outline: 1px dashed grey;
   }
   .explanation__description--healthy::after {
     content: "";
@@ -629,7 +674,6 @@ svg {
     width: 245px;
     margin: 70px 0 0 0;
     padding: 113px 0 0 0;
-    outline: 1px dashed grey;
   }
   .explanation__description::before {
     content: "";
@@ -642,7 +686,6 @@ svg {
 .example__wrapper {
   max-width: 280px;
   margin: auto;
-  outline: 1px dashed green;
 }
 .example__title {
   margin: 0 0 26px 0;
@@ -671,7 +714,6 @@ svg {
   font-weight: normal;
   line-height: 24px;
   text-transform: uppercase;
-  outline: 1px dashed black;
 }
 .example__list:first-child {
   margin-right: 10%;
@@ -690,7 +732,6 @@ svg {
   font-family: 'Arial', sans-serif;
   font-size: 12px;
   line-height: 12px;
-  outline: 1px solid green;
 }
 .example__cost {
   text-align: center;
@@ -704,7 +745,6 @@ svg {
   height: 285px;
   margin-top: 42px;
   background: url("../img/before-mobile.png") no-repeat 50% 0;
-  outline: 1px solid yellow;
 }
 @media (min-width: 768px) {
   .example__wrapper {
@@ -737,7 +777,6 @@ svg {
     font-weight: normal;
     line-height: 37px;
     text-transform: uppercase;
-    outline: 1px dashed black;
   }
   .example__value {
     padding-top: 10px;
@@ -762,7 +801,6 @@ svg {
     height: 572px;
     margin-top: 56px;
     background: url("../img/before-desktop.png") no-repeat 0 0, url("../img/after-desktop.png") no-repeat 100% 0;
-    outline: 1px solid yellow;
   }
 }
 @media (min-width: 1440px) {
@@ -810,7 +848,6 @@ svg {
     flex-shrink: 0;
     margin-top: 0px;
     background: url("../img/before-desktop2.png") no-repeat 40px 0, url("../img/after-desktop.png") no-repeat 385px 0;
-    outline: 1px solid yellow;
   }
 }
 .slider__control {
@@ -857,7 +894,6 @@ svg {
   justify-content: space-between;
   max-width: 280px;
   margin: 0 auto 23px auto;
-  outline: 1px dashed green;
 }
 .coordinates__invitation {
   width: 50%;
@@ -889,7 +925,6 @@ svg {
     padding-left: 41px;
     font-size: 20px;
     line-height: 25px;
-    outline: 1px solid grey;
   }
   .coordinates__address {
     width: 190px;
@@ -897,12 +932,10 @@ svg {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    outline: 1px solid blue;
   }
   .coordinates__map {
     height: 396px;
     margin-top: 60px;
-    outline: 1px solid black;
   }
 }
 @media (min-width: 1440px) {
@@ -925,7 +958,6 @@ svg {
     padding-left: 80px;
     font-size: 20px;
     line-height: 25px;
-    outline: 1px solid grey;
   }
   .coordinates__address {
     width: 165px;
@@ -934,12 +966,10 @@ svg {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
-    outline: 1px solid blue;
   }
   .coordinates__map {
     height: 401px;
     margin-top: 0;
-    outline: 1px solid black;
   }
 }
 .social {
@@ -973,6 +1003,12 @@ svg {
 .social__item--facebook {
   background: url("/img/Sprite2.png") -20px -495px;
 }
+.social__item:hover {
+  opacity: 0.8;
+}
+.social__item:active {
+  opacity: 0.6;
+}
 .social__link {
   display: block;
   width: 100%;
@@ -991,6 +1027,12 @@ svg {
 .copyright {
   box-sizing: border-box;
   padding: 65px 50px 19px 0;
+}
+.copyright:hover {
+  opacity: 0.8;
+}
+.copyright:active {
+  opacity: 0.6;
 }
 .copyright__link {
   position: relative;
@@ -1018,6 +1060,12 @@ svg {
   width: 128px;
   height: 24px;
   margin: 39px auto 31px auto;
+}
+.page-footer__logo:hover {
+  opacity: 0.8;
+}
+.page-footer__logo:active {
+  opacity: 0.6;
 }
 .page-footer__copyright {
   max-width: 280px;
@@ -1104,16 +1152,18 @@ svg {
   margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px solid green;
 }
 .catalog__item-wrapper {
   display: flex;
 }
-.catalog__img {
-  width: 50%;
+.catalog__item-wrapper picture {
   height: 144px;
-  margin-top: 5px;
-  outline: 1px dashed black;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+.catalog__img {
+  width: auto;
+  height: 144px;
 }
 .catalog__item-right {
   width: 50%;
@@ -1149,6 +1199,13 @@ svg {
   color: white;
   background-color: #68b738;
 }
+.catalog__to-order:hover {
+  background-color: #5eaa2f;
+}
+.catalog__to-order:active {
+  color: #8fc46e;
+  background-color: #5eaa2f;
+}
 .catalog__more {
   margin-top: 105px;
   margin-bottom: 9px;
@@ -1174,6 +1231,14 @@ svg {
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+.catalog__show-all:hover {
+  background-color: #ebebeb;
+}
+.catalog__show-all:active {
+  color: #b9b9b9;
+  background-color: #ebebeb;
 }
 @media (min-width: 768px) {
   .catalog__list {
@@ -1187,16 +1252,20 @@ svg {
     height: 480px;
     margin-top: 75px;
     margin-bottom: 16px;
-    outline: 1px dashed orange;
   }
   .catalog__item-wrapper {
     flex-direction: column;
   }
+  .catalog__item-wrapper picture {
+    width: 195px;
+    height: 208px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+  }
   .catalog__img {
     width: 195px;
     height: 208px;
-    margin: auto;
-    margin-top: 0;
+    margin: 0 auto auto auto;
   }
   .catalog__item-right {
     width: 100%;
@@ -1232,9 +1301,7 @@ svg {
   }
   .catalog__more {
     width: 150px;
-    margin: auto;
-    margin-top: 254px;
-    margin-bottom: 26px;
+    margin: 254px auto 26px auto;
     font-size: 20px;
     line-height: 20px;
     text-align: center;
@@ -1272,7 +1339,6 @@ svg {
     height: 472px;
     margin-top: 0;
     margin-bottom: 101px;
-    outline: 1px dashed orange;
   }
   .catalog__item-wrapper {
     flex-direction: column;
@@ -1394,6 +1460,13 @@ svg {
   line-height: 20px;
   color: white;
   background-color: #68b738;
+}
+.extra-goods__to-order:hover {
+  background-color: #5eaa2f;
+}
+.extra-goods__to-order:active {
+  color: #8fc46e;
+  background-color: #5eaa2f;
 }
 .extra-goods__promo {
   height: 289px;
@@ -1573,6 +1646,12 @@ svg {
     line-height: 30px;
   }
 }
+.form input:hover {
+  outline: none;
+}
+.form input:focus {
+  outline: 2px solid #444444;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -1611,6 +1690,9 @@ svg {
   position: relative;
   margin: 0 0 13px 47px;
   padding: 6px 0 6px 0;
+}
+.form__program-label:active {
+  color: #bcbcbc;
 }
 .form__label-box {
   position: absolute;
@@ -1676,6 +1758,9 @@ svg {
   margin-bottom: 6px;
   padding-left: 47px;
 }
+.form__extra-label:active {
+  color: #bcbcbc;
+}
 .form__extra {
   display: none;
 }
@@ -1706,18 +1791,23 @@ svg {
   background-color: #68b738;
   border: none;
 }
+.form__submit:hover {
+  background-color: #5eaa2f;
+}
+.form__submit:active {
+  color: #99c684;
+  background-color: #5eaa2f;
+}
 @media (min-width: 768px) {
   .form__cover {
     width: 342px;
     margin-left: 41px;
     margin-bottom: 58px;
-    outline: 1px solid orange;
   }
   .form__info-wrapper {
     width: 312px;
     font-size: 20px;
     line-height: 20px;
-    outline: 1px solid green;
   }
   .form__name-label,
   .form__weight-label,
@@ -1739,7 +1829,6 @@ svg {
     padding-left: 75px;
     font-size: 20px;
     line-height: 20px;
-    outline: 1px solid blue;
   }
   .form__program-label,
   .form__program {
@@ -1807,11 +1896,10 @@ svg {
     padding: 10px 0 10px 55px;
     font-size: 20px;
     line-height: 20px;
-    outline: 1px solid grey;
   }
   .form__extra-label-box {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     display: block;
     width: 40px;
@@ -1893,7 +1981,6 @@ svg {
     padding: 10px 0 10px 53px;
     font-size: 20px;
     line-height: 20px;
-    outline: 1px solid grey;
   }
   .form__submit {
     width: 570px;
@@ -1969,8 +2056,25 @@ svg {
   padding: 23px 0 23px 0;
   color: black;
 }
+.site-list__item:hover {
+  opacity: 0.6;
+}
+.site-list__item:active {
+  opacity: 0.3;
+}
+.site-list__item--active:hover {
+  opacity: 1;
+}
+.site-list__item--active:active {
+  opacity: 1;
+}
 .site-list__item a {
   color: black;
+}
+@media (max-width: 767px) {
+  .site-list__item--active {
+    background-color: #ebebeb;
+  }
 }
 @media (min-width: 768px) {
   .site-list {
@@ -1986,6 +2090,18 @@ svg {
   .site-list__item--active {
     padding-bottom: 3px;
     border-bottom: 2px solid #68b738;
+  }
+  .site-list__item:hover {
+    opacity: 0.6;
+  }
+  .site-list__item:active {
+    opacity: 0.3;
+  }
+  .site-list__item--active:hover {
+    opacity: 1;
+  }
+  .site-list__item--active:active {
+    opacity: 1;
   }
 }
 @media (min-width: 1440px) {
@@ -2006,5 +2122,12 @@ svg {
   }
   .back .site-list__item a {
     color: white;
+  }
+  .back .site-list__item--active {
+    border-bottom: 2px solid white;
+  }
+  .site-list__item--active {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #68b738;
   }
 }

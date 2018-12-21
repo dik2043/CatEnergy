@@ -1,3 +1,11 @@
+.form input:hover {
+  outline: none;
+}
+
+.form input:focus {
+  outline: 2px solid #444444;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -48,6 +56,11 @@
   margin: 0 0 13px 47px;
   padding: 6px 0 6px 0;
 }
+
+.form__program-label:active {
+  color: #bcbcbc;
+}
+
 
 .form__label-box {
   position: absolute;
@@ -132,6 +145,10 @@
   padding-left: 47px;
 }
 
+.form__extra-label:active {
+  color: #bcbcbc;
+}
+
 .form__extra {
   display: none;
 }
@@ -171,6 +188,15 @@
   border: none;
 }
 
+.form__submit:hover {
+  background-color: #5eaa2f;
+}
+
+.form__submit:active {
+  color: #99c684;
+  background-color: #5eaa2f;
+}
+
 //768                   768                   768                   768                   
 
 @media (min-width: 768px) {
@@ -180,7 +206,7 @@
     margin-left: 41px;
     margin-bottom: 58px;
 
-    outline: 1px solid orange;
+    //outline: 1px solid orange;
   }
   
   .form__info-wrapper {
@@ -189,7 +215,7 @@
     font-size: 20px;
     line-height: 20px;
 
-    outline: 1px solid green;
+    //outline: 1px solid green;
   }
 
   .form__name-label,
@@ -216,7 +242,7 @@
     
     font-size: 20px;
     line-height: 20px;
-    outline: 1px solid blue;
+    //outline: 1px solid blue;
   }
   
   .form__program-label,
@@ -230,7 +256,7 @@
     padding-bottom: 17px;
     padding-left: 11px;
   }
-
+  
   .form__label-box {
     top: 6px;
     left: -47px;
@@ -304,12 +330,12 @@
     font-size: 20px;
     line-height: 20px;
     
-    outline: 1px solid grey;
+    //outline: 1px solid grey;
   }
 
   .form__extra-label-box {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     display: block;
     width: 40px;
@@ -418,7 +444,7 @@
     font-size: 20px;
     line-height: 20px;
 
-    outline: 1px solid grey;
+    //outline: 1px solid grey;
   }
 
   .form__submit {
